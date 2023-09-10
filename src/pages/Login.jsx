@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import styled from 'styled-components'
-import Logo from '../ui/Logo';
-import Heading from '../ui/Heading';
-import LoginForm from '../features/authentication/LoginForm';
+import styled from "styled-components";
+import Logo from "../ui/Logo";
+import Heading from "../ui/Heading";
+import LoginForm from "../features/authentication/LoginForm";
 
 const LoginLayout = styled.main`
   min-height: 100vh;
@@ -15,16 +15,29 @@ const LoginLayout = styled.main`
   background-color: var(--color-grey-50);
 `;
 
-
-
 const Login = () => {
   return (
     <LoginLayout>
       <Logo />
-      <Heading as="h4" style={{textAlign:'center'}}>Log in to your account</Heading>
-      <LoginForm />
-    </LoginLayout>
-  )
-}
+      <Heading as="h4" style={{ textAlign: "center" }}>
+        Log in to your account
+      </Heading>
 
-export default Login
+      <LoginForm />
+      {/* test user credentials */}
+      <p
+        style={{
+          textAlign: "center",
+          border: "1px dashed blue",
+          borderRadius: "5px",
+          padding: "8px",
+        }}
+      >
+
+       📧 <b>themysticspice@gmail.com</b> <br />🔑 <b>themysticadmin</b>
+      </p>
+    </LoginLayout>
+  );
+};
+
+export default Login;
